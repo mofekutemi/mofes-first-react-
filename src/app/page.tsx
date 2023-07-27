@@ -1,91 +1,76 @@
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
-
-export default function Home() {
+import Link from 'next/link'
+import Iphone from '../../public/iphone.svg'
+import optimus from '../../public/optimus.svg'
+import Frame from '../../public/Frame 5356.svg'
+import Playstore from '../../public/Playstore.svg'
+import Appstore from '../../public/Appstore.svg'
+import Ellipse from '../../public/Ellipse.svg'
+const Header = () => {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <div>
+   {/*  <header className='w-full fixed mb-20 top-0 p-5'> */}
+   
+  <Image src={optimus} alt="optimus"/>
+  <div className="px-4 cursor cursor-pointer">
+  <svg className="w-6 hidden h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" >
+    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+  </svg>
+  <div className="flex items-center justify-between px-10">
+  <ul className="flex items-center gap-10 text-sm">
+    <li>
+      <Link href="/Home">
+        Home
+      </Link>
+    </li>
+    <li>
+      <Link href="/Save">
+        Save
+      </Link>
+    </li>
+    <li>
+      <Link href="/FAQs">
+        FAQs
+      </Link>
+    </li>
+  </ul>
+  <Image className="hidden md:flex items-center gap-10" src={Frame} alt="frame"/>
+</div>
+</div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
+{/* </header>*/}
 
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+<div className='w w-full flex items-center justify-center gap-12 h-screen'>
+    <div className='w-1/2 text-left'>
+    <h1 className="font-bold text-6xl block">Save. Invest.</h1>
+<h1 className="font-bold text-6xl block">Spend.</h1>
+<h1 className="font-bold text-6xl block">with Optimus.</h1>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+
+<div className="font-manrope text-base font-medium leading-7 tracking-normal text-left">
+      <p>Optimus is a financial technology solution that helps you do the most by harmonizing banking, wealth management, and brokerage needs into one simple platform. Optimus is changing the way people interact with money to achieve financial freedom.</p>
+    </div>
+      <div className='flex gap-10 items-center'>
+
+    <Image src={Playstore} alt="playstore" />
+
+    <Image src={Appstore} alt="Appstore" />
+
+</div>
+      
+
+    </div>
+    <div className="relative">
+  <Image src={Iphone} alt="iphone" className="w-96" />
+  <Image src={Ellipse} alt="Ellipse" className="absolute top-0 px-949 py-444" />
+</div>
+
+
+
+
+  </div>
+          </div>
   )
 }
+export default Header;
